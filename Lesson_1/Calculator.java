@@ -6,7 +6,7 @@ public class Calculator{
         */
         long x = 85;
         long y = 5;
-        String z = "^";
+        String z = "-";
         long res = 0;
         if(x > 0){
             if(y > 0){

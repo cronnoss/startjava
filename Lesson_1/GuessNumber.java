@@ -6,7 +6,7 @@ public class GuessNumber{
         - если число угадано — System.out.println("Вы угадали!")
         - игра продолжается до тех пор, пока число не будет угадано
         */
-        int x = 70;
+        int x = 17;// Это число "загадал" компьютер
         int InputFigure = 20;
         int chislo = InputFigure;
         if(chislo > 0){
