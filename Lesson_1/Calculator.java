@@ -1,42 +1,33 @@
-public class Calculator{
+/*TODO: Реализуйте Калькулятор, который должен уметь выполнять математические операции (+, -, *, /, ^, %) над целыми положительными числами:
+- для проверки знака математической операции воспользуйтесь оператором if else
+- выведите на экран результат работы калькулятора с помощью System.out.println()
+*/
+public class Calculator {
     public static void main(String[] args) {
-        /*TODO: Реализуйте Калькулятор, который должен уметь выполнять математические операции (+, -, *, /, ^, %) над целыми положительными числами:
-        - для проверки знака математической операции воспользуйтесь оператором if else
-        - выведите на экран результат работы калькулятора с помощью System.out.println()
-        */
+
         long x = 85;
         long y = 5;
-        String z = "+";
-        long res = 0;
-        if(x > 0){
-            if(y > 0){
-                if(z == "+"){
-                    res = x + y;
+        String SignOfMathematicalOperation = "-";
+        long result = 0;
+        if(x > 0 && y > 0) {
+            if(SignOfMathematicalOperation == "+") {
+                result = x + y;
+            } else if (SignOfMathematicalOperation == "-") {
+                result = x - y;
+            } else if (SignOfMathematicalOperation == "*") {
+                result = x * y;
+            } else if(SignOfMathematicalOperation == "/") {
+                result = x / y;
+            } else if(SignOfMathematicalOperation == "^") {
+                result = 1;
+                for(int i = 1; i <= y; i++){
+                    result = result * x; //Возведение в степень
                 }
-                if(z == "-"){
-                    res = x - y;
-                }
-                if(z == "*"){
-                    res = x * y;
-                }
-                if(z == "/"){
-                    res = x / y;
-                }
-                if(z == "^"){
-                    res = 1;
-                    for(int i = 1; i <= y; i++){
-                    res = res * x; //Возведение в степень
-                    }
-                }
-                if(z == "%"){
-                    res = x % y;
-                }
-                System.out.println(x + " " + z + " " + y + " = " + res);
-            }else{
-                System.out.println("Калькулятор выполняет математические операции над целыми положительными числами. Пожалуйста введите положительное число.");
+            } else if (SignOfMathematicalOperation == "%") {
+                result = x % y;
             }
-        
-        }else{
+            System.out.println(x + " " + SignOfMathematicalOperation + " " + y + " = " + result);        
+        } else {
             System.out.println("Калькулятор выполняет математические операции над целыми положительными числами. Пожалуйста введите положительное число.");
         }
     }
