@@ -14,7 +14,7 @@ public class GuessNumber {
                 if(userNumber < computerNumber) {
                     System.out.println("Введенное вами число " + userNumber + " меньше того, что загадал компьютер");
                     userNumber++;
-                } else if(userNumber > computerNumber) {
+                } else if (userNumber > computerNumber) {
                     System.out.println("Введенное вами число " + userNumber + " больше того, что загадал компьютер");
                     userNumber--;
                 }
