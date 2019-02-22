@@ -30,31 +30,27 @@
 } 
 */
 public class ConditionalStatement {
+
     public static void main(String[] args) {
-        
         int age = 46;
         boolean isAge = age > 20;
         if(isAge) {
             System.out.println("Вы старше 20 лет. Ваш возраст = " + age);
         }
 
-        char man = 'm';
-        boolean isMan = man == 'm';
+        boolean isMan = true;
         if(isMan) {
             System.out.println("Ваш пол - мужской");
         }
 
-        char woman = 'f';
-        boolean isWoman = woman == 'f';
-        if(isWoman) {
+        if(!isMan) {
             System.out.println("Ваш пол - женский");
         }
 
         float height = 1.72f;
-        boolean isHeight = height < 1.80;
-        if(isHeight) {
+        if(height < 1.8) {
             System.out.println("Ваш рост меньше 1 метр 80 см. Ваш рост = " + height);
-        } else if(isHeight == false) {
+        } else {
             System.out.println("Ваш рост больше 1 метр 80 см. Ваш рост = " + height);
         }
 

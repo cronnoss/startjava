@@ -8,22 +8,22 @@
 */
 public class Variable {
     public static void main(String[] args) {
-        byte yadro = 4;
-        short chastotaProzessora = 2500;
-        int operativka = 10;
-        long chastotaPamyati = 1600;
-        float disk = 1.0f;
-        double grafika = 1536.0d;
-        char c = 'M';
-        boolean Noviy = false;
+        byte core = 4;
+        short cpuFrequency = 2500;
+        int ddr3RAM = 10;
+        long memoryFrequency = 1600;
+        float ssdDrive = 120.0f;
+        double gpuFrequency = 1536.0d;
+        char operatingSystem = 'M';
+        boolean modern = false;
 
-        System.out.println(yadro);
-        System.out.println(chastotaProzessora);
-        System.out.println(operativka);
-        System.out.println(chastotaPamyati);
-        System.out.println(disk);
-        System.out.println(grafika);
-        System.out.println(c);
-        System.out.println(Noviy);
+        System.out.println(core);
+        System.out.println(cpuFrequency);
+        System.out.println(ddr3RAM);
+        System.out.println(memoryFrequency);
+        System.out.println(ssdDrive);
+        System.out.println(gpuFrequency);
+        System.out.println(operatingSystem);
+        System.out.println(modern);
     }
 }
