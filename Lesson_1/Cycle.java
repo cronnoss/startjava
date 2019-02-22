@@ -8,7 +8,7 @@ public class Cycle {
         
         // TODO: Выведите на консоль с помощью цикла while все числа от [6, -6] (шаг итерации равен 2)
         int j = -6;
-        while(j <= 6){
+        while(j <= 6) {
             System.out.println(j);
             j += 2;
         }
