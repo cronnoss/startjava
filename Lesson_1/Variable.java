@@ -7,6 +7,7 @@
 Покажите Д/З наставнику
 */
 public class Variable {
+    
     public static void main(String[] args) {
         byte core = 4;
         short cpuFrequency = 2500;
