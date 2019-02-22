@@ -1,5 +1,5 @@
 public class Cycle {
-    
+
     public static void main(String[] args) {
         // TODO: Выведите на консоль с помощью цикла for все числа от [0, 20]
         for(int i = 1; i<=20; i++) {
@@ -27,7 +27,7 @@ public class Cycle {
             if(value % 2 != 0) { 
                 sum += value;
             }
-            value += 1;
+            value++;
         } while(value <= 20);
         System.out.println(sum);
     }

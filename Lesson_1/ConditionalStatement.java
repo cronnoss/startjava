@@ -57,7 +57,7 @@ public class ConditionalStatement {
         char name = 'М';
         if(name == 'М') {
             System.out.println("Ваше имя начинается на букву М");
-        } else if(name == 'И') {
+        } else if (name == 'И') {
             System.out.println("Ваше имя начинается на букву И");
         } else {
             System.out.println("Ваше имя начинается не на букву М, и не на букву И");

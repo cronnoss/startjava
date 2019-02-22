@@ -16,9 +16,9 @@ public class Calculator {
                 result = x - y;
             } else if (operation == "*") {
                 result = x * y;
-            } else if(operation == "/") {
+            } else if (operation == "/") {
                 result = x / y;
-            } else if(operation == "^") {
+            } else if (operation == "^") {
                 result = 1;
                 for(int i = 1; i <= y; i++){
                     result *= x; //Возведение в степень
