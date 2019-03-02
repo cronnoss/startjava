@@ -3,6 +3,7 @@ public class JaegerTest {
     public static void main(String[] args) {
         Jaeger jaegerOne = new Jaeger();
         Jaeger jaegerTwo = new Jaeger();
+        
         //присваивание значений полям объекта wolfOne с помощью сеттеров:
         jaegerOne.setModelName("Gipsy Danger");
         jaegerOne.setMark("Mark-3");
