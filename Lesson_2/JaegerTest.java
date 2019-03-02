@@ -4,7 +4,7 @@ public class JaegerTest {
         Jaeger jaegerOne = new Jaeger();
         Jaeger jaegerTwo = new Jaeger();
         
-        //присваивание значений полям объекта wolfOne с помощью сеттеров:
+        // присваивание значений полям объекта wolfOne с помощью сеттеров:
         jaegerOne.setModelName("Gipsy Danger");
         jaegerOne.setMark("Mark-3");
         jaegerOne.setOrigin("USA");
@@ -17,7 +17,7 @@ public class JaegerTest {
         jaegerTwo.setWeight(2.412f);
         jaegerTwo.setSpeed(3);
 
-        //считывание значений полей объекта с помощью геттеров:
+        // считывание значений полей объекта с помощью геттеров:
         System.out.println("Jaeger's name is " + jaegerOne.getModelName());
         System.out.println("Jaeger's mark is " + jaegerOne.getMark());
         System.out.println("Jaeger's origin is " + jaegerOne.getOrigin());
@@ -41,7 +41,7 @@ public class JaegerTest {
         jaegerTwo.setWeight(0.001f);
         System.out.println("Jaeger's weight is " + jaegerTwo.getWeight());
 
-        //вызов метода объекта:
+        // вызов метода объекта:
         jaegerOne.drift();
         jaegerOne.move();
         System.out.println(jaegerOne.scanKaiju());

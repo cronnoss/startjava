@@ -7,7 +7,7 @@ public class Jaeger {
     private float weight;
     private int speed;
 
-    // геттеры и сеттеры для доступа к полям:
+    // геттеры и сеттеры для доступа к полям :
     public String getModelName() {
         return modelName;
     } 
