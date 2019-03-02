@@ -69,7 +69,7 @@ public class Wolf {
 
     public void setColor(String color) {
         this.color = color;
-}
+    }
 
     // методы:
     public void move() {
