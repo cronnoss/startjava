@@ -7,6 +7,15 @@ public class Jaeger {
     private float weight;
     private int speed;
 
+    // конструктор для инициализации полей объекта, который будет создан и будет относиться к типу Jaeger:
+    public Jaeger(String modelName, String mark, String origin, float weight, int speed) {
+        this.modelName = modelName;
+        this.mark = mark;
+        this.origin = origin;
+        this.weight = weight;
+        this.speed = speed;
+    }
+
     // геттеры и сеттеры для доступа к полям :
     public String getModelName() {
         return modelName;

@@ -1,15 +1,8 @@
 public class JaegerTest {
 
     public static void main(String[] args) {
-        // создание 1-го экземпляра класса Jaeger
-        Jaeger gipsyDanger = new Jaeger();
-        
-        // присваивание значений полям объекта wolfOne с помощью сеттеров:
-        gipsyDanger.setModelName("Gipsy Danger");
-        gipsyDanger.setMark("Mark-3");
-        gipsyDanger.setOrigin("USA");
-        gipsyDanger.setWeight(1.980f);
-        gipsyDanger.setSpeed(7);
+        // создание 1-го экземпляра класса Jaeger с помощью конструктора, находящегося в классе Jaeger:
+        Jaeger gipsyDanger = new Jaeger("Gipsy Danger", "Mark-3", "USA", 1.980f, 7);
 
         // считывание значений полей объекта с помощью геттеров:
         System.out.println("Jaeger's name is " + gipsyDanger.getModelName());
@@ -30,15 +23,8 @@ public class JaegerTest {
         System.out.println(gipsyDanger.scanKaiju());
         
         
-        // создание 2-го экземпляра класса Jaeger
-        Jaeger chernoAlpha = new Jaeger();
-        
-        // присваивание значений полям объекта wolfOne с помощью сеттеров:
-        chernoAlpha.setModelName("Cherno Alpha");
-        chernoAlpha.setMark("Mark-1");
-        chernoAlpha.setOrigin("Russia");
-        chernoAlpha.setWeight(2.412f);
-        chernoAlpha.setSpeed(3);
+        // создание 2-го экземпляра класса Jaeger с помощью конструктора, находящегося в классе Jaeger:
+        Jaeger chernoAlpha = new Jaeger("Cherno Alpha", "Mark-1", "Russia", 2.412f, 3);
 
         // считывание значений полей объекта с помощью геттеров:
         System.out.println("Jaeger's name is " + chernoAlpha.getModelName());
