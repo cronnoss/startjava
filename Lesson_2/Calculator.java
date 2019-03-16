@@ -1,6 +1,5 @@
 /*TODO: Реализуйте Калькулятор, который должен уметь выполнять математические операции (+, -, *, /, ^, %) над целыми положительными числами:
 - выведите на экран результат работы калькулятора с помощью System.out.println()
-
 Модифицируйте программу Калькулятор:
 реализуйте дополнительный класс CalculatorTest
 для проверки знака математической операции воспользуйтесь оператором switch
@@ -8,7 +7,6 @@
 Введите первое число: 2
 Введите знак математической операции: ^
 Введите второе число: 10
-
 Для ввода данных в Калькуляторе используйте клавиатуру (класс Scanner)
 Для завершения или продолжения работы программ Калькулятор выводите сообщение: "Хотите продолжить? [да/нет]: "
 Если пользователь ввел ни "да" ни "нет", а что-то другое — снова выведите сообщение: "Хотите продолжить? [да/нет]: "
@@ -23,6 +21,23 @@ public class Calculator {
     private long y = 0; 
     private long result = 0;
 
+    // геттеры для доступа к полям :
+    public long getX() {
+        return x;
+    } 
+
+    public String getSign() {
+        return sign;
+    } 
+
+    public long getY() {
+        return y;
+    } 
+
+    public long getResult() {
+        return result;
+    }
+
     // методы:
     public void inputX() {
         System.out.print("Введите первое число: ");
@@ -35,49 +50,27 @@ public class Calculator {
         }
 
     public void inputSign() {
-        while(sign == "") {
+        while(sign != "+" & sign != "-" & sign != "*" & sign != "/" & sign != "^" & sign != "%") {
             System.out.print("Введите знак математической операции: ");
-            Scanner scanOperation = new Scanner(System.in);
-            String operation = scanOperation.nextLine();
-
-            switch (operation) {
-                case "+" :  sign = "+";
-                            inputY();
-                            result = x + y;
-                            showResult();
-                            break;
-                case "-" :  sign = "-";
-                            inputY();
-                            result = x - y;
-                            showResult();
-                            break;
-                case "*":   sign = "*";
-                            inputY();
-                            result = x * y;
-                            showResult();
-                            break;
-                case "/":   sign = "/";
-                            inputY();
-                            result = x / y;
-                            showResult();
-                            break; 
-                case "^":   sign = "^";
-                            result = 1;
-                            inputY();
-                            for(int i = 1; i <= y; i++){
-                                result *= x; //Возведение в степень
-                            }
-                            showResult();
-                            break;
-                case "%":   sign = "%";
-                            inputY();
-                            result = x % y;
-                            showResult();
-                            break;
-                default:    System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
-                            break; 
+            Scanner scanSign = new Scanner(System.in);
+            sign = scanSign.nextLine();
+            switch (sign) {
+                case "+" : sign = "+";
+                    break;
+                case "-" : sign = "-";
+                    break;
+                case "*" : sign = "*";
+                    break;
+                case "/" : sign = "/";
+                    break; 
+                case "^" : sign = "^";
+                    break;
+                case "%" : sign = "%";
+                    break;
+                default : System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
+                    break; 
             }
-        }
+        } 
     }
 
     public void inputY() {
@@ -90,7 +83,29 @@ public class Calculator {
         }
     }
 
-    public void showResult() {
-        System.out.println(x + " " + sign + " " + y + " = " + result);
+    public void calculate() {
+        switch (sign) {
+            case "+" : sign = "+";
+                result = x + y;
+                break;
+            case "-" : sign = "-";
+                result = x - y;
+                break;
+            case "*" : sign = "*";
+                result = x * y;
+                break;
+            case "/" : sign = "/";
+                result = x / y;
+                break; 
+            case "^" : sign = "^";
+                result = 1;
+                for(long i = 1; i <= y; i++){
+                    result *= x;
+                }
+                break;
+            case "%" : sign = "%";
+                result = x % y;
+                break;
+        }
     } 
 }

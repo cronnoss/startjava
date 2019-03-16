@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class CalculatorTest {
-    
+
     public static void main(String[] args) {
-        boolean done = false;
+        String answer = "да";
         do {
             Calculator calculatorOne = new Calculator();
 
@@ -11,21 +11,27 @@ public class CalculatorTest {
 
             calculatorOne.inputSign();
 
-            boolean enterCorrectAnswerYesOrNo = false;
+            calculatorOne.inputY();
+
+            calculatorOne.calculate();
+            
+            System.out.println(calculatorOne.getX() + " " + calculatorOne.getSign() + " " + calculatorOne.getY() + " = " + calculatorOne.getResult());
+
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
                 Scanner scanAnswer = new Scanner(System.in);
-                String answer = scanAnswer.nextLine();
-                    if(answer.equals("да")) {
+                answer = scanAnswer.nextLine();
+                switch (answer) {
+                    case "да" : answer = "да";
                         System.out.println("Продолжаем!");
-                        done = false;
-                        enterCorrectAnswerYesOrNo = true;
-                    } else if (answer.equals("нет")) {
+                        break;
+                    case "нет" : answer = "нет";
                         System.out.println("Жаль (До Встречи!)");
-                        done = true;
-                        enterCorrectAnswerYesOrNo = true;
-                    }
-            } while (!enterCorrectAnswerYesOrNo);
-        } while (!done);
+                        break;
+                    default : 
+                        break;   
+                }
+            } while (answer != "да" & answer != "нет");
+        } while (answer == "да");
     }
 }
