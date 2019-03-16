@@ -16,10 +16,10 @@ import java.util.Scanner;
 public class Calculator {
 
     // поля:
-    private long x = 0;
-    private String sign = "";
-    private long y = 0; 
-    private long result = 0;
+    private long x;
+    private String sign;
+    private long y; 
+    private long result;
 
     // геттеры для доступа к полям :
     public long getX() {
@@ -43,41 +43,35 @@ public class Calculator {
         System.out.print("Введите первое число: ");
         Scanner scanX = new Scanner(System.in);
         x = scanX.nextLong();
-            if(x <= 0) {
+            while(x <= 0) {
                 System.out.print("Калькулятор выполняет математические операции над целыми положительными числами. Пожалуйста введите положительное число: ");
                 x = scanX.nextLong();
             }
         }
 
     public void inputSign() {
-        while(sign != "+" & sign != "-" & sign != "*" & sign != "/" & sign != "^" & sign != "%") {
+        do {
             System.out.print("Введите знак математической операции: ");
             Scanner scanSign = new Scanner(System.in);
             sign = scanSign.nextLine();
             switch (sign) {
-                case "+" : sign = "+";
-                    break;
-                case "-" : sign = "-";
-                    break;
-                case "*" : sign = "*";
-                    break;
-                case "/" : sign = "/";
-                    break; 
-                case "^" : sign = "^";
-                    break;
-                case "%" : sign = "%";
-                    break;
+                case "+" : break;
+                case "-" : break;
+                case "*" : break;
+                case "/" : break; 
+                case "^" : break;
+                case "%" : break;
                 default : System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
                     break; 
             }
-        } 
+        } while(!sign.equals("+") && !sign.equals("-") && !sign.equals("*") && !sign.equals("/") && !sign.equals("^") && !sign.equals("%"));
     }
 
     public void inputY() {
     System.out.print("Введите второе число: ");
     Scanner scanY = new Scanner(System.in);
     y = scanY.nextLong();
-    if(y <= 0) {
+    while(y <= 0) {
         System.out.print("Калькулятор выполняет математические операции над целыми положительными числами. Пожалуйста введите положительное число: ");
         y = scanY.nextLong();
         }
@@ -85,26 +79,21 @@ public class Calculator {
 
     public void calculate() {
         switch (sign) {
-            case "+" : sign = "+";
-                result = x + y;
+            case "+" : result = x + y;
                 break;
-            case "-" : sign = "-";
-                result = x - y;
+            case "-" : result = x - y;
                 break;
-            case "*" : sign = "*";
-                result = x * y;
+            case "*" : result = x * y;
                 break;
-            case "/" : sign = "/";
-                result = x / y;
+            case "/" : result = x / y;
                 break; 
-            case "^" : sign = "^";
+            case "^" : 
                 result = 1;
                 for(long i = 1; i <= y; i++){
                     result *= x;
                 }
                 break;
-            case "%" : sign = "%";
-                result = x % y;
+            case "%" : result = x % y;
                 break;
         }
     } 
