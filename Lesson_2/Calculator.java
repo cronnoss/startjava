@@ -66,30 +66,24 @@ public class Calculator {
             sign = scanSign.nextLine();
             switch (sign) {
                 case "+" : 
-                    inputY();
                     result = x + y;
                     break;
                 case "-" : 
-                    inputY();
                     result = x - y;
                     break;
                 case "*" : 
-                    inputY();
                     result = x * y;
                     break;
                 case "/" : 
-                    inputY();
                     result = x / y;
                     break; 
                 case "^" : 
-                    inputY();
                     result = 1;
                     for(long i = 1; i <= y; i++) {
                         result *= x;
                     }
                     break;
                 case "%" : 
-                    inputY();
                     result = x % y;
                     break;
                 default : System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
