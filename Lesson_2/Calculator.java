@@ -90,5 +90,5 @@ public class Calculator {
                     break;
             }
         } while(!sign.equals("+") && !sign.equals("-") && !sign.equals("*") && !sign.equals("/") && !sign.equals("^") && !sign.equals("%"));
-    } 
+    }
 }
