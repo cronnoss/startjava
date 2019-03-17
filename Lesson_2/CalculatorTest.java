@@ -7,6 +7,7 @@ public class CalculatorTest {
         do {
             Calculator calculatorOne = new Calculator();
             calculatorOne.inputX();
+            calculatorOne.inputY();
             calculatorOne.calculate();
             System.out.println(calculatorOne.getX() + " " + calculatorOne.getSign() + " " + calculatorOne.getY() + " = " + calculatorOne.getResult());
 
