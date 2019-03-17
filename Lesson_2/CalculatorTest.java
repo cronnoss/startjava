@@ -7,8 +7,6 @@ public class CalculatorTest {
         do {
             Calculator calculatorOne = new Calculator();
             calculatorOne.inputX();
-            calculatorOne.inputSign();
-            calculatorOne.inputY();
             calculatorOne.calculate();
             System.out.println(calculatorOne.getX() + " " + calculatorOne.getSign() + " " + calculatorOne.getY() + " = " + calculatorOne.getResult());
 
@@ -16,11 +14,6 @@ public class CalculatorTest {
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
                 answer = scanAnswer.nextLine();
-                switch (answer) {
-                    case "да" : System.out.println("Продолжаем!");
-                        break;
-                    case "нет" : break;   
-                }
             } while (!answer.equals("да") && !answer.equals("нет"));
         } while (answer.equals("да"));
         System.out.println("Жаль (До Встречи!)");

@@ -49,24 +49,6 @@ public class Calculator {
             }
         }
 
-    public void inputSign() {
-        do {
-            System.out.print("Введите знак математической операции: ");
-            Scanner scanSign = new Scanner(System.in);
-            sign = scanSign.nextLine();
-            switch (sign) {
-                case "+" : break;
-                case "-" : break;
-                case "*" : break;
-                case "/" : break; 
-                case "^" : break;
-                case "%" : break;
-                default : System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
-                    break; 
-            }
-        } while(!sign.equals("+") && !sign.equals("-") && !sign.equals("*") && !sign.equals("/") && !sign.equals("^") && !sign.equals("%"));
-    }
-
     public void inputY() {
     System.out.print("Введите второе число: ");
     Scanner scanY = new Scanner(System.in);
@@ -78,23 +60,41 @@ public class Calculator {
     }
 
     public void calculate() {
-        switch (sign) {
-            case "+" : result = x + y;
-                break;
-            case "-" : result = x - y;
-                break;
-            case "*" : result = x * y;
-                break;
-            case "/" : result = x / y;
-                break; 
-            case "^" : 
-                result = 1;
-                for(long i = 1; i <= y; i++){
-                    result *= x;
-                }
-                break;
-            case "%" : result = x % y;
-                break;
-        }
+        do {
+            System.out.print("Введите знак математической операции: ");
+            Scanner scanSign = new Scanner(System.in);
+            sign = scanSign.nextLine();
+            switch (sign) {
+                case "+" : 
+                    inputY();
+                    result = x + y;
+                    break;
+                case "-" : 
+                    inputY();
+                    result = x - y;
+                    break;
+                case "*" : 
+                    inputY();
+                    result = x * y;
+                    break;
+                case "/" : 
+                    inputY();
+                    result = x / y;
+                    break; 
+                case "^" : 
+                    inputY();
+                    result = 1;
+                    for(long i = 1; i <= y; i++) {
+                        result *= x;
+                    }
+                    break;
+                case "%" : 
+                    inputY();
+                    result = x % y;
+                    break;
+                default : System.out.println("Введите одну из следующих математических операции: +, -, *, /, ^, % ");
+                    break;
+            }
+        } while(!sign.equals("+") && !sign.equals("-") && !sign.equals("*") && !sign.equals("/") && !sign.equals("^") && !sign.equals("%"));
     } 
 }
