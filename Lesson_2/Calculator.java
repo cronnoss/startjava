@@ -1,5 +1,5 @@
-/*TODO: Реализуйте Калькулятор, который должен уметь выполнять математические операции (+, -, *, /, ^, %) над целыми положительными числами:
-- выведите на экран результат работы калькулятора с помощью System.out.println()
+//TODO: Реализуйте Калькулятор, который должен уметь выполнять математические операции (+, -, *, /, ^, %) над целыми положительными числами:
+/* - выведите на экран результат работы калькулятора с помощью System.out.println()
 Модифицируйте программу Калькулятор:
 реализуйте дополнительный класс CalculatorTest
 для проверки знака математической операции воспользуйтесь оператором switch
@@ -11,7 +11,6 @@
 Для завершения или продолжения работы программ Калькулятор выводите сообщение: "Хотите продолжить? [да/нет]: "
 Если пользователь ввел ни "да" ни "нет", а что-то другое — снова выведите сообщение: "Хотите продолжить? [да/нет]: "
 */
-import java.util.Scanner;
 
 public class Calculator {
 
@@ -30,10 +29,6 @@ public class Calculator {
         this.x = x;
     }
 
-    public String getSign() {
-        return sign;
-    } 
-
     public void setSign(String sign) {
         this.sign = sign;
     }
@@ -46,22 +41,33 @@ public class Calculator {
         this.y = y;
     }
 
-    public long getResult() {
-        return result;
-    }
-
-    public void setResult(long result) {
-        this.result = result;
-    }
-
-
     // методы:
-    public void inputX() {
-    }
-
-    public void inputY() {
-    }
-
     public void calculate() {
+        switch (sign) {
+            case "+" : 
+                System.out.println(x + y);
+                break;
+            case "-" : 
+                System.out.println(x - y);
+                break;
+            case "*" : 
+                System.out.println(x * y);
+                break;
+            case "/" : 
+                System.out.println(x / y);
+                break; 
+            case "^" : 
+                result = 1;
+                for(long i = 1; i <= y; i++) {
+                    result *= x;
+                }
+                System.out.println(result);
+                break;
+            case "%" : 
+                System.out.println(x % y);
+                break;
+            default : System.out.println("Некорректный знак математической операции! ");
+                break;
+        }
     }
 }
