@@ -14,7 +14,7 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите первое число: ");
                 tempVariable = scan.nextLong();
-                if (tempVariable >= 0) {
+                if (tempVariable > 0) {
                     calculatorOne.setX(tempVariable);    
                 }
             } while (tempVariable < 0);
