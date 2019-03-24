@@ -54,7 +54,7 @@ public class Calculator {
                 System.out.println(x * y);
                 break;
             case "/" : 
-                System.out.println(x / y);
+                System.out.println((double)x / y);
                 break; 
             case "^" : 
                 result = 1;
