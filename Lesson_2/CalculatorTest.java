@@ -14,18 +14,17 @@ public class CalculatorTest {
             do {
                 System.out.print("Введите первое число: ");
                 tempVariable = scan.nextLong();
-                if (tempVariable > 0) {
-                    calculatorOne.setX(tempVariable);    
-                }
             } while (tempVariable < 0);
+            calculatorOne.setX(tempVariable);
             
             System.out.print("Введите знак математической операции: ");
             calculatorOne.setSign(scan.next());
 
             do {
                 System.out.print("Введите второе число: ");
-                calculatorOne.setY(scan.nextLong());
-            } while (calculatorOne.getY() < 0);
+                tempVariable = scan.nextLong();
+            } while (tempVariable < 0);
+            calculatorOne.setY(tempVariable);
 
             calculatorOne.calculate();
 

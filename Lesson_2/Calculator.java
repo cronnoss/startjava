@@ -11,7 +11,6 @@
 Для завершения или продолжения работы программ Калькулятор выводите сообщение: "Хотите продолжить? [да/нет]: "
 Если пользователь ввел ни "да" ни "нет", а что-то другое — снова выведите сообщение: "Хотите продолжить? [да/нет]: "
 */
-
 public class Calculator {
 
     // поля:
@@ -20,21 +19,13 @@ public class Calculator {
     private long y; 
     private long result;
 
-    // геттеры и сеттеры  для доступа к полям :
-    public long getX() {
-        return x;
-    }
-
+    // сеттеры  для доступа к полям :
     public void setX(long x) {
         this.x = x;
     }
 
     public void setSign(String sign) {
         this.sign = sign;
-    }
-
-    public long getY() {
-        return y;
     }
 
     public void setY(long y) {
@@ -69,5 +60,5 @@ public class Calculator {
             default : System.out.println("Некорректный знак математической операции! ");
                 break;
         }
-    }
+    }    
 }
