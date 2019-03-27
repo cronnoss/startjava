@@ -7,6 +7,7 @@ public class GuessNumberTest {
         Scanner scan = new Scanner(System.in);
 
         do {
+            System.out.println("Игра " + "'Угадай число'. " + "Два игрока по очереди угадывают число, загаданное компьютером.");
             boolean win = false;
 
             GuessNumber game = new GuessNumber(0);
