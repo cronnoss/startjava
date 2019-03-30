@@ -15,7 +15,7 @@ public class GuessNumberTest {
 
             GuessNumber game = new GuessNumber(user1, user2);
             
-            game.gameProcess();
+            game.startGame();
 
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");

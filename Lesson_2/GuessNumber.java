@@ -9,28 +9,27 @@ public class GuessNumber {
     private Scanner scan = new Scanner(System.in);
 
     public GuessNumber(Player user1, Player user2) {
-		this.user1 = user1;
-		this.user2 = user2;
-	}
+        this.user1 = user1;
+        this.user2 = user2;
+    }
 
-    public void gameProcess() {
+    public void startGame() {
         isWin = false;
         computerNumber = (int) (Math.random() * 101);
-		do {
-			inputUserNumber(user1);
-			guessingNumber(user1);
-			inputUserNumber(user2);
-			guessingNumber(user2);
-		} while (!isWin);
+        do {
+            inputUserNumber(user1);
+            guessNumber(user1);
+            inputUserNumber(user2);
+            guessNumber(user2);
+        } while (!isWin);
     }
 
-    public void inputUserNumber(Player player) {
-            System.out.println(player.getName() + ", введите число: ");
-            player.setNumber(scan.nextInt());
-
+    private void inputUserNumber(Player player) {
+        System.out.println(player.getName() + ", введите число: ");
+        player.setNumber(scan.nextInt());
     }
 
-    public void guessingNumber(Player player) {
+    private void guessNumber(Player player) {
         if(player.getNumber() == computerNumber) {
             System.out.println(player.getName() + ", вы угадали!");
             isWin = true;
