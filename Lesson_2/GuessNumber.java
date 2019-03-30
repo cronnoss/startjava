@@ -1,34 +1,43 @@
+import java.util.Scanner;
+
 public class GuessNumber {
     
-    int computerNumber;
-    int number;
+    private int computerNumber;
+    private Player user1;
+    private Player user2;
+    private boolean isWin;
+    private Scanner scan = new Scanner(System.in);
 
-    public GuessNumber(int computerNumber) {
-        this.computerNumber = computerNumber;
-    }
+    public GuessNumber(Player user1, Player user2) {
+		this.user1 = user1;
+		this.user2 = user2;
+	}
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public void computerNumber() {
+    public void gameProcess() {
+        isWin = false;
         computerNumber = (int) (Math.random() * 101);
+		do {
+			inputUserNumber(user1);
+			guessingNumber(user1);
+			inputUserNumber(user2);
+			guessingNumber(user2);
+		} while (!isWin);
     }
 
-    public void number() {
-        if(number < computerNumber) {
-            System.out.println("Введенное вами число меньше того, что загадал компьютер");
-        } else if (number > computerNumber) {
-            System.out.println("Введенное вами число больше того, что загадал компьютер");
-        }
+    public void inputUserNumber(Player player) {
+            System.out.println(player.getName() + ", введите число: ");
+            player.setNumber(scan.nextInt());
+
     }
 
-    public boolean isWin() {
-        if(number == computerNumber) {
-            System.out.println("Вы угадали!");
-            return true;
-        } else {
-            return false;
+    public void guessingNumber(Player player) {
+        if(player.getNumber() == computerNumber) {
+            System.out.println(player.getName() + ", вы угадали!");
+            isWin = true;
+        } else if (player.getNumber() < computerNumber) {
+            System.out.println(player.getName() + ", введенное вами число меньше того, что загадал компьютер");
+        } else if (player.getNumber() > computerNumber) {
+            System.out.println(player.getName() + ", введенное вами число больше того, что загадал компьютер");
         }
     }
 }
