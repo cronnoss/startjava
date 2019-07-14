@@ -2,12 +2,14 @@
 - для проверки знака математической операции воспользуйтесь оператором if else
 - выведите на экран результат работы калькулятора с помощью System.out.println()
 */
+package com.startjava.lesson_1.calculator;
+
 public class Calculator {
 
     public static void main(String[] args) {
-        long x = 85;
-        long y = 5;
-        String operation = "^";
+        long x = 2;
+        long y = 4;
+        String operation = "+";
         long result = 0;
         if(x > 0 && y > 0) {
             if(operation == "+") {

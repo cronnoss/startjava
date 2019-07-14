@@ -4,6 +4,8 @@
 - если число угадано — System.out.println("Вы угадали!")
 - игра продолжается до тех пор, пока число не будет угадано
 */
+package com.startjava.lesson_1.game;
+
 public class GuessNumber {
 
     public static void main(String[] args) {
