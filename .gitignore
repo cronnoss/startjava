@@ -3,3 +3,10 @@ out/
 
 # unnecessary folder
 .DS_Store
+array/
+
+# unnecessary folder
+.idea
+
+# unnecessary file
+startjava.iml
