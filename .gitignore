@@ -3,10 +3,10 @@ out/
 
 # unnecessary folder
 .DS_Store
-
+/src/com/startjava/lesson_2_3_4/array/
 # unnecessary folder
 .idea
 
 # unnecessary file
 startjava.iml
-/src/com/startjava/lesson_2_3_4/array/
+
