@@ -1,7 +1,7 @@
 # out folder
 out/
 
-# unnecessary folder
+# unnecessary  folder
 .DS_Store
 .idea
 /src/com/startjava/lesson_2_3_4/array/
