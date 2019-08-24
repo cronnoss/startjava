@@ -39,6 +39,6 @@ UPDATE robots
     SET kaijukill = kaijukill + 1
     WHERE status = 'Workable';
 
---remove destroyed robots
+--remove all destroyed robots
 DELETE FROM robots 
     WHERE status = 'Destroyed';
